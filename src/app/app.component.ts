@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     );
   }
 
-  /*
+
   public onUpdateEmloyee(employee: Employee): void {
     this.employeeService.updateEmployee(employee).subscribe(
       (response: Employee[]) => {
@@ -60,36 +60,39 @@ export class AppComponent implements OnInit {
     );
   }
 
-  public onDeleteEmloyee(employeeId: number | null): void {
-    this.employeeService.deleteEmployee(employeeId).subscribe(
-      (response: void) => {
-        console.log(response);
+  public onDeleteEmloyee(employeeId: number): void {
+    if (employeeId != null) {
+      this.employeeService.deleteEmployee(employeeId).subscribe(
+        (response: void) => {
+          console.log(response);
+          this.getEmployees();
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+      );
+    }
+  }
+
+  /*
+    public searchEmployees(key: string): void {
+      console.log(key);
+      const results: Employee[] = [];
+      for (const employee of this.employees) {
+        if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
+          || employee.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+          results.push(employee);
+        }
+      }
+      this.employees = results;
+      if (results.length === 0 || !key) {
         this.getEmployees();
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-
-  public searchEmployees(key: string): void {
-    console.log(key);
-    const results: Employee[] = [];
-    for (const employee of this.employees) {
-      if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
-        results.push(employee);
       }
     }
-    this.employees = results;
-    if (results.length === 0 || !key) {
-      this.getEmployees();
-    }
-  }
-
-  */
+  
+    */
 
   public onOpenModal(employee: Employee | null, mode: string): void {
     const container = document.getElementById('main-container');
@@ -100,16 +103,20 @@ export class AppComponent implements OnInit {
     if (mode === 'add') {
       button.setAttribute('data-target', '#addEmployeeModal');
     }
-    /*
     if (mode === 'edit') {
-      this.editEmployee = employee;
+      if (employee != null) {
+        this.editEmployee = employee;
+      }
       button.setAttribute('data-target', '#updateEmployeeModal');
     }
+
     if (mode === 'delete') {
-      this.deleteEmployee = employee;
+      if (employee != null) {
+        this.deleteEmployee = employee;
+      }
       button.setAttribute('data-target', '#deleteEmployeeModal');
     }
-    */
+
     container?.appendChild(button);
     button.click();
   }
