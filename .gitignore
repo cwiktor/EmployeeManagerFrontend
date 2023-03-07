@@ -4,3 +4,4 @@ node_modules/.bin/color-support
 node_modules
 *.pack
 *.old
+.angular
