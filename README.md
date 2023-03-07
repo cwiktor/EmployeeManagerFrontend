@@ -12,9 +12,7 @@ Employee manager app frontend.
 Simple app to help you manage your employees. The motivation to create the project was to learn spring boot and angular technologies.
 This is the frontend part of the project, the backend part is in another repository: https://github.com/cwiktor/EmployeeManagerBackend
 
-<img width="1440" alt="Zrzut ekranu 2023-03-7 o 17 35 58" src="https://user-images.githubusercontent.com/110846802/223489525-7eef6dc0-54c1-4179-8628-bee633b4a7a1.png">
-
-<img width="500" alt="Zrzut ekranu 2023-03-7 o 17 36 16" src="https://user-images.githubusercontent.com/110846802/223489563-bbed5c20-ce54-4511-a846-3836fe006bb7.png"> <img width="497" alt="Zrzut ekranu 2023-03-7 o 17 36 24" src="https://user-images.githubusercontent.com/110846802/223489591-27c3e5e3-814a-494b-b7f5-749926beb1ca.png">
+<img width="1440" alt="Zrzut ekranu 2023-03-7 o 17 35 58" src="https://user-images.githubusercontent.com/110846802/223489525-7eef6dc0-54c1-4179-8628-bee633b4a7a1.png"> <img width="500" alt="Zrzut ekranu 2023-03-7 o 17 36 16" src="https://user-images.githubusercontent.com/110846802/223489563-bbed5c20-ce54-4511-a846-3836fe006bb7.png"> <img width="497" alt="Zrzut ekranu 2023-03-7 o 17 36 24" src="https://user-images.githubusercontent.com/110846802/223489591-27c3e5e3-814a-494b-b7f5-749926beb1ca.png">
 
 ## Technologies
 Backend:
