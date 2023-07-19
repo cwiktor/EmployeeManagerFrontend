@@ -7,7 +7,7 @@ import { enviroment } from './enviroments/enviroment';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService {  //DOCZYTAC TUTAJ ZASADY DZIALANIA TEGO HTTP CLIENT ITP
+export class EmployeeService {  
 
   private apiServerUrl = enviroment.apiBaseUrl;
 
